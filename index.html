@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lamah Burger — Burgers grillés à la flamme, Conakry</title>
+  <meta name="description" content="Lamah Burger, burgers premium grillés à la flamme à Conakry. Sur place, à emporter ou au volant.">
+  <meta name="theme-color" content="#14100D">
+  <link rel="icon" href="assets/brand/logo-badge.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="modulepreload" href="assets/js/main.js">
+</head>
+<body>
+  <a class="skip-link" href="#menu">Aller au contenu</a>
+
+  <header class="site-header" data-over="dark">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="#vol" aria-label="Lamah Burger — accueil">
+        <img class="logo-on-dark" src="assets/brand/logo-horizontal-dark.svg" alt="" width="190" height="44">
+        <img class="logo-on-light" src="assets/brand/logo-horizontal-light.svg" alt="" width="190" height="44">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu de navigation</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <ul class="site-nav__list" data-render="nav"></ul>
+        <a class="btn btn--primary btn--small site-nav__cta" data-render="nav-cta" href="#commander">Commander</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Le vol : scène épinglée, texte HTML superposé au canvas -->
+    <section class="flight" id="vol" data-surface="dark" aria-label="Visite du restaurant en vol continu">
+      <div class="flight__stage">
+        <div class="flight__backdrop" aria-hidden="true"></div>
+        <img class="flight__poster" alt="" aria-hidden="true" decoding="async">
+        <canvas class="flight__canvas" aria-hidden="true"></canvas>
+        <div class="flight__shade" aria-hidden="true"></div>
+        <p class="flight__pending" aria-hidden="true">Vidéo du vol en production</p>
+        <div class="flight__chapters" data-render="chapters"></div>
+        <div class="flight__hud">
+          <span class="flight__scene" aria-hidden="true"></span>
+          <span class="flight__progress" aria-hidden="true"><span class="flight__progress-bar"></span></span>
+          <a class="flight__skip" href="#menu">Passer la visite <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="menu" data-surface="light" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Carte</p>
+          <h2 class="h2" id="menu-title" data-render="menu-heading"></h2>
+          <p class="section-head__intro" data-render="menu-intro"></p>
+        </header>
+        <div class="menu" data-render="menu"></div>
+        <p class="fineprint" data-render="menu-note"></p>
+      </div>
+    </section>
+
+    <section class="section section--ink" id="savoir-faire" data-surface="dark" aria-labelledby="craft-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Savoir-faire</p>
+          <h2 class="h2" id="craft-title" data-render="craft-heading"></h2>
+          <p class="section-head__intro" data-render="craft-intro"></p>
+        </header>
+        <ol class="pillars" data-render="pillars"></ol>
+      </div>
+    </section>
+
+    <section class="section section--kraft" id="commander" data-surface="light" aria-labelledby="order-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Commander</p>
+          <h2 class="h2" id="order-title" data-render="order-heading"></h2>
+        </header>
+        <ul class="modes" data-render="modes"></ul>
+        <div class="order-actions" data-render="order-actions"></div>
+      </div>
+    </section>
+
+    <section class="section section--ink visit" id="visite" data-surface="dark" aria-labelledby="visit-title">
+      <div class="container visit__grid">
+        <div class="visit__text">
+          <p class="eyebrow">Nous trouver</p>
+          <h2 class="h2" id="visit-title" data-render="visit-heading"></h2>
+          <p class="lead" data-render="visit-body"></p>
+          <dl class="facts" data-render="facts"></dl>
+          <div class="actions" data-render="visit-actions"></div>
+        </div>
+        <figure class="visit__media" data-render="visit-media">
+          <div class="media-placeholder" aria-hidden="true"><img src="assets/brand/logo-mark.svg" alt=""></div>
+          <figcaption>Vue aérienne du restaurant, extraite de la visite.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="contact" data-surface="light" aria-labelledby="form-title">
+      <div class="container form-grid">
+        <header class="section-head">
+          <p class="eyebrow">Réservations</p>
+          <h2 class="h2" id="form-title" data-render="form-heading"></h2>
+          <p class="section-head__intro" data-render="form-intro"></p>
+        </header>
+        <form class="form" data-render="form" novalidate>
+          <div class="field">
+            <label for="f-name">Nom</label>
+            <input id="f-name" name="nom" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Téléphone</label>
+            <input id="f-phone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required>
+          </div>
+          <div class="field field--half">
+            <label for="f-date">Date</label>
+            <input id="f-date" name="date" type="date" required>
+          </div>
+          <div class="field field--half">
+            <label for="f-people">Personnes</label>
+            <input id="f-people" name="personnes" type="number" min="1" max="60" value="2" required>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message <span class="optional">(facultatif)</span></label>
+            <textarea id="f-msg" name="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit" data-render="form-submit">Envoyer la demande</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-surface="dark">
+    <div class="container site-footer__inner">
+      <img src="assets/brand/logo-stacked-dark.svg" alt="Lamah Burger" width="120" height="146">
+      <ul class="site-footer__nav" data-render="footer-nav"></ul>
+      <p class="site-footer__note" data-render="footer-note"></p>
+      <p class="site-footer__legal">© <span data-render="year"></span> Lamah Burger · Conakry, Guinée</p>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>.flight{height:auto}.flight__stage{position:relative;height:100svh}</style>
+    <p class="noscript">Lamah Burger — burgers grillés à la flamme à Conakry. Activez JavaScript pour afficher la carte et la visite du restaurant.</p>
+  </noscript>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

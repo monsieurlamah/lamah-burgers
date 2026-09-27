@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+# Mire de test générée localement (scripts/dev-frames.sh)
+media/dev-frames/
+# Sorties de contrôle (planches contact, captures)
+production/inspect/
+tests/screenshots/
+media/dev-test-master.mp4
+media/.frames-staging.*

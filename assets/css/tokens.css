@@ -1,0 +1,52 @@
+/* Lamah Burger — design tokens (shared by the site and design/style-tile.html) */
+:root {
+  /* Colour */
+  --ink: #14100d;          /* charbon — fond principal */
+  --ink-2: #1e1814;
+  --ink-3: #2b231d;
+  --cream: #f6eedf;        /* texte sur fond sombre */
+  --paper: #fbf7ef;        /* sections claires */
+  --kraft: #eadbc0;        /* papier d'emballage */
+  --kraft-2: #dcc7a3;
+  --gold: #f1a51f;         /* or / safran — action principale */
+  --gold-bright: #ffb939;
+  --gold-deep: #b87908;
+  --ember: #c8401e;        /* braise / latérite — accent */
+  --ember-deep: #9e2f15;
+  --leaf: #2f5d3a;         /* frais — usage ponctuel */
+
+  --on-dark: var(--cream);
+  --on-dark-muted: rgba(246, 238, 223, 0.74);
+  --on-dark-line: rgba(246, 238, 223, 0.18);
+  --on-light: var(--ink);
+  --on-light-muted: #5d5046;
+  --on-light-line: rgba(20, 16, 13, 0.14);
+
+  /* Type */
+  --font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-accent: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  --fs-display: clamp(3.1rem, 1.6rem + 6.6vw, 8rem);
+  --fs-h1: clamp(2.4rem, 1.5rem + 3.8vw, 5rem);
+  --fs-h2: clamp(2.2rem, 1.4rem + 3.2vw, 4.4rem);
+  --fs-h3: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem);
+  --fs-lead: clamp(1.05rem, 0.98rem + 0.35vw, 1.3rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.78rem;
+
+  /* Space & shape */
+  --gutter: clamp(16px, 4.5vw, 56px);
+  --maxw: 1240px;
+  --section-y: clamp(72px, 10vw, 140px);
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --radius-l: 28px;
+  --radius-pill: 999px;
+
+  /* Depth & motion */
+  --shadow-card: 0 1px 0 rgba(20, 16, 13, 0.05), 0 18px 40px -22px rgba(20, 16, 13, 0.45);
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --header-h: 72px;
+}

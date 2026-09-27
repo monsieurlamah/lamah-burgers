@@ -1,0 +1,14 @@
+{
+  "name": "lamah-burger",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lamah Burger — site vitrine avec visite en vol continu pilotée au scroll",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs 8080",
+    "check": "node scripts/check-assets.mjs && node tests/timeline.test.mjs",
+    "test:flight": "node tests/flight-check.mjs",
+    "frames": "bash scripts/make-frames.sh",
+    "frames:dev": "bash scripts/dev-frames.sh"
+  }
+}

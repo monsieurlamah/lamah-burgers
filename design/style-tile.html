@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lamah Burger — Style tile</title>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <style>
+    body { background: var(--paper); color: var(--ink); }
+    .tile { width: min(100% - 2 * var(--gutter), 1280px); margin: 40px auto 80px; display: grid; gap: 20px; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .panel { border-radius: var(--radius-l); padding: 28px; background: #fffdf8; box-shadow: var(--shadow-card); min-width: 0; }
+    .panel--ink { background: var(--ink); color: var(--cream); }
+    .panel--kraft { background: var(--kraft); }
+    .label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--on-light-muted); margin: 0 0 18px; }
+    .panel--ink .label { color: var(--on-dark-muted); }
+    .span-12 { grid-column: span 12; } .span-8 { grid-column: span 8; } .span-7 { grid-column: span 7; } .span-6 { grid-column: span 6; } .span-5 { grid-column: span 5; } .span-4 { grid-column: span 4; }
+    @media (max-width: 900px) { .tile > * { grid-column: span 12 !important; } }
+    .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; }
+    .head h1 { font: 800 clamp(2rem, 4vw, 3.2rem)/0.95 var(--font-display); font-stretch: 75%; text-transform: uppercase; margin: 0; }
+    .head h1 em { font: italic 400 1.04em var(--font-accent); text-transform: none; color: var(--ember); }
+    .head p { margin: 0; color: var(--on-light-muted); max-width: 46ch; }
+    .logos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
+    .logos > div { border-radius: var(--radius-m); display: grid; place-items: center; padding: 28px; min-height: 150px; }
+    .logos .d { background: var(--ink); } .logos .l { background: var(--paper); border: 1px solid var(--on-light-line); }
+    .logos img { max-height: 120px; width: auto; }
+    .logos .wide { grid-column: span 2; min-height: 120px; }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 12px; }
+    .sw { border-radius: var(--radius-m); overflow: hidden; border: 1px solid var(--on-light-line); background: #fff; }
+    .sw i { display: block; height: 78px; }
+    .sw div { padding: 10px 12px; font-size: 0.8rem; line-height: 1.35; }
+    .sw b { display: block; font-size: 0.86rem; }
+    .type-sample .display { font-size: clamp(3rem, 7vw, 5.6rem); }
+    .type-sample .h2 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 18px; }
+    .spec { font-size: 0.8rem; color: var(--on-dark-muted); margin-top: 16px; display: grid; gap: 4px; }
+    .panel:not(.panel--ink) .spec { color: var(--on-light-muted); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .links a { color: var(--ember); text-underline-offset: 4px; font-weight: 600; }
+    .panel--ink .links a { color: var(--gold); }
+    .imagery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .imagery figure { margin: 0; }
+    .imagery .ph { aspect-ratio: 4 / 3; border-radius: var(--radius-m); background: linear-gradient(160deg, #1b1410, #6a2a10 70%, #f1a51f); position: relative; overflow: hidden; }
+    .imagery .ph.cool { background: linear-gradient(170deg, #1b2436, #3b3a4a 55%, #f19a4a); }
+    .imagery .ph.fire { background: radial-gradient(70% 60% at 50% 90%, #ff7a2a, #7a1f0a 55%, #14100d); }
+    .imagery figcaption { font-size: 0.8rem; color: var(--on-dark-muted); margin-top: 8px; line-height: 1.4; }
+    .card-demo { max-width: 360px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  </style>
+</head>
+<body data-surface="light">
+  <main class="tile">
+    <header class="span-12 head">
+      <h1>Lamah Burger — <em>style tile</em></h1>
+      <p>Direction « Charbon &amp; Or » : la générosité franche d’un fast-food, la tenue d’une maison haut de gamme. Tokens réels du site (assets/css/tokens.css).</p>
+    </header>
+
+    <section class="panel span-7">
+      <p class="label">Logo — masters vectoriels (assets/brand)</p>
+      <div class="logos">
+        <div class="d"><img src="../assets/brand/logo-stacked-dark.svg" alt="Lamah Burger, version empilée sur fond sombre"></div>
+        <div class="l"><img src="../assets/brand/logo-mark.svg" alt="Emblème Lamah Burger"></div>
+        <div class="l wide"><img src="../assets/brand/logo-horizontal-light.svg" alt="Lamah Burger, version horizontale sur fond clair" style="max-height:64px"></div>
+      </div>
+      <p class="spec">Emblème : trois formes (pain, steak, base) + trois graines. Wordmark : Bricolage Grotesque 800 condensé, « Burger » en Instrument Serif italique. Texte vectorisé, sans dépendance de police.</p>
+    </section>
+
+    <section class="panel span-5">
+      <p class="label">Couleurs</p>
+      <div class="swatches">
+        <div class="sw"><i style="background:var(--ink)"></i><div><b>Charbon</b>#14100D · fond</div></div>
+        <div class="sw"><i style="background:var(--gold)"></i><div><b>Or safran</b>#F1A51F · action</div></div>
+        <div class="sw"><i style="background:var(--ember)"></i><div><b>Braise</b>#C8401E · accent</div></div>
+        <div class="sw"><i style="background:var(--cream)"></i><div><b>Crème</b>#F6EEDF · texte</div></div>
+        <div class="sw"><i style="background:var(--kraft)"></i><div><b>Kraft</b>#EADBC0 · papier</div></div>
+        <div class="sw"><i style="background:var(--leaf)"></i><div><b>Feuille</b>#2F5D3A · frais</div></div>
+      </div>
+      <p class="spec">Contrastes : crème / charbon 16,4:1 · charbon / or 9,1:1 · braise / papier 4,7:1 · braise foncée / kraft 5,4:1. L’or n’est jamais utilisé en texte sur fond clair.</p>
+    </section>
+
+    <section class="panel panel--ink span-8 type-sample" data-surface="dark">
+      <p class="label">Typographie</p>
+      <p class="eyebrow">Conakry · Grillé à la flamme</p>
+      <p class="display">Le burger, <em>en grand.</em></p>
+      <p class="h2">Grillé à la minute, <em>jamais à l’avance.</em></p>
+      <p class="lead">Texte courant en Instrument Sans : la rapidité d’un fast-food, l’exigence d’une grande table. Lecture confortable sur l’image comme sur le papier.</p>
+      <div class="spec">
+        <span>Titres — Bricolage Grotesque 800, largeur 75 %, capitales, interlignage 0,9</span>
+        <span>Accent — Instrument Serif italique, en or sur sombre, en braise sur clair</span>
+        <span>Texte — Instrument Sans 400–600 · Surtitres 600, capitales, interlettrage 0,16 em</span>
+      </div>
+    </section>
+
+    <section class="panel span-4" data-surface="light">
+      <p class="label">Boutons &amp; liens</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#">Voir le menu</a>
+        <a class="btn btn--ghost" href="#">Réserver</a>
+      </div>
+      <div class="panel panel--ink" data-surface="dark" style="margin-top:16px;padding:20px;box-shadow:none">
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#">Commander</a>
+          <a class="btn btn--ghost" href="#">Nous trouver</a>
+        </div>
+        <p class="links" style="margin:16px 0 0">Lien : <a href="#">Itinéraire</a></p>
+      </div>
+      <p class="links" style="margin:16px 0 0">Lien sur clair : <a href="#">Voir la carte complète</a></p>
+      <div class="chips" style="margin-top:16px">
+        <span class="tag tag--signature">Signature</span><span class="tag tag--epice">Épicé</span><span class="tag tag--vegetarien">Végétarien</span><span class="tag">Poulet</span>
+      </div>
+    </section>
+
+    <section class="panel panel--kraft span-5" data-surface="light">
+      <p class="label">Composant — carte menu</p>
+      <article class="card card-demo">
+        <div class="card__media"><img class="card__placeholder" src="../assets/brand/logo-mark.svg" alt=""></div>
+        <div class="card__body">
+          <div class="card__top"><h4 class="card__name">Le Lamah</h4><span class="card__price">95 000 GNF</span></div>
+          <p class="card__desc">Double steak smashé, cheddar affiné, oignons caramélisés, sauce Lamah, pain brioché.</p>
+          <ul class="tags"><li class="tag tag--signature">Signature</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel panel--ink span-7" data-surface="dark">
+      <p class="label">Direction des images (Higgsfield)</p>
+      <div class="imagery">
+        <figure><div class="ph"></div><figcaption>Heure dorée : bois sombre, laiton, verre, lumière ambrée qui sort par les portes.</figcaption></figure>
+        <figure><div class="ph fire"></div><figcaption>Cuisine : flamme du grill, fromage qui fond, inox brossé, vapeur — gros plans chauds.</figcaption></figure>
+        <figure><div class="ph cool"></div><figcaption>Aérien au crépuscule : ciel bleu nuit, route animée, palmiers, océan au loin.</figcaption></figure>
+      </div>
+      <p class="spec">Objectif 24–35 mm, faible profondeur de champ en intérieur. Aucun texte, logo ou marque visible dans les images générées. Tons chauds dominants, bleu nuit en contrepoint à l’extérieur.</p>
+    </section>
+  </main>
+</body>
+</html>
